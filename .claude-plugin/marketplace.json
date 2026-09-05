@@ -13,7 +13,9 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/gazetteer"
+        "./skills/gazetteer",
+        "./skills/gazetteer-audit",
+        "./skills/gazetteer-lighthouse-audit"
       ]
     }
   ]

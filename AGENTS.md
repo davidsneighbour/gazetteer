@@ -1,10 +1,10 @@
-# Repository Guidelines
+# Repository guidelines
 
 AGENTS.md is the single source of truth for repository instructions. Tool- or
 assistant-specific files may add narrow overrides, but shared workflow,
 structure, security, and editing rules belong here.
 
-## Project Structure & Module Organization
+## Project structure & module organization
 
 Gazetteer is a collection of standalone AI skills for search visibility and
 content discovery: technical SEO, local SEO, content optimisation, metadata,
@@ -16,12 +16,16 @@ independently loadable and uses `SKILL.md` as its entrypoint. Supporting
 files belong inside the owning skill directory, commonly in `resources/`,
 `references/`, or `scripts/`.
 
-## Skill Map
+## Skill map
 
 * `gazetteer`: placeholder skill. No behaviour is defined yet; fill in its
   `SKILL.md` before relying on it.
+* `gazetteer-audit`: evidence-backed website specification audit for live
+  sites, staging deployments, or web projects.
+* `gazetteer-lighthouse-audit`: worker skill for reproducible Lighthouse
+  audit artifact collection.
 
-## Build, Test, and Development Commands
+## Build, test, and development commands
 
 There is no root build step. Run helper scripts directly from the repository
 root once a skill defines one, for example:
@@ -42,7 +46,7 @@ npm run lint:markdown
 npm run lint:spelling
 ```
 
-## Coding Style & Naming Conventions
+## Coding style & naming conventions
 
 Use plain Markdown for skill documentation. Keep `SKILL.md` frontmatter
 specific and actionable, especially `id`, `name`, `title`, and `description`.
@@ -50,13 +54,13 @@ Skill directories use lowercase hyphenated names such as `gazetteer` or, for
 future companion skills, `gazetteer-<purpose>`; resource scripts use
 action-oriented names. Prefer ASCII punctuation unless quoting existing text.
 
-## Testing Guidelines
+## Testing guidelines
 
 No coverage threshold is defined. Validate changed scripts with targeted
 `--help`, dry-run, or non-writing modes before handoff. When a skill's
 behaviour changes, update its `SKILL.md` in the same change.
 
-## Commit & Pull Request Guidelines
+## Commit & pull request guidelines
 
 Always work on `main`. Do not create branches unless the user explicitly asks
 for a feature branch.
@@ -85,7 +89,7 @@ Pull requests should explain the affected skill, list validation performed,
 and link the related issue or task. Include screenshots only for asset or
 README visual changes.
 
-## Agent Workflow
+## Agent workflow
 
 Before starting repository work, agents must check for project-root
 `RESUME.md`. If it exists, read it first, resolve or explicitly abandon the

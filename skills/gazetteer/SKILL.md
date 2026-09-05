@@ -2,15 +2,13 @@
 id: gazetteer
 name: gazetteer
 title: Gazetteer
-description: Search visibility and content discovery, including technical SEO, local SEO, content optimisation, metadata, structured data, entities, locations, service areas, internal linking, crawlability, indexing, and search-result presentation. Placeholder skill; no behaviour is defined yet.
+description: Route Gazetteer search visibility and content discovery requests to the matching skill, including technical SEO, local SEO, content optimisation, website audits, Lighthouse audits, metadata, structured data, entities, locations, service areas, internal linking, crawlability, indexing, and search-result presentation.
 ---
 
 Gazetteer: describe it. Place it. Make it findable.
 
-This is an empty scaffold for the Gazetteer skill. It reserves the skill's
-identity, frontmatter, and marketplace/manifest entries within this
-repository's toolset, but does not yet define any modes, workflow, or
-behaviour.
+Use this as the router for Gazetteer skills. Match the user's requested mode,
+then invoke or follow the most specific skill.
 
 ## Scope
 
@@ -28,9 +26,16 @@ discovery work, including:
 * crawlability and indexing
 * search-result presentation
 
-## Status
+## Routing
 
-No modes are defined yet. Do not rely on this skill for real work until it
-has concrete, checkable instructions like the other skills in this family
-(see `idiolect`, `posthaste`, or `clerkwork` for the expected shape of a
-finished skill).
+Use these modes when the user names them directly or clearly asks for the
+matching work:
+
+* `audit`: use `$gazetteer-audit` for comprehensive website, launch readiness,
+  technical SEO, accessibility, security, performance, privacy, resilience,
+  internationalisation, and agent-readiness audits.
+* `lighthouse`: use `$gazetteer-lighthouse-audit` for reproducible Lighthouse
+  data collection against a live HTTP or HTTPS URL.
+
+If no mode fits, explain that Gazetteer does not yet define a dedicated
+workflow for the request, and ask for the target task or desired audit type.

@@ -1,4 +1,4 @@
-## AI skills for search visibility and content discovery
+# AI skills for search visibility and content discovery
 
 Gazetteer is a collection of reusable AI skills for search visibility and content discovery: technical SEO, local SEO, content optimisation, metadata, structured data, entities, locations, service areas, internal linking, crawlability, indexing, and search-result presentation. Describe it. Place it. Make it findable.
 
@@ -29,6 +29,8 @@ Use `--global` when the skills should be available outside the current project.
 ## Skills
 
 * `gazetteer` is a placeholder. No behaviour is defined yet.
+* `gazetteer-audit` audits a live website, staging deployment, or web project against an evidence-backed checklist.
+* `gazetteer-lighthouse-audit` runs reproducible Lighthouse audits and returns reusable report artifacts.
 
 ## The cabinet of @davidsneighbour's skills
 
